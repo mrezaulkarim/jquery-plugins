@@ -4,7 +4,7 @@
 }
 /* NivoSlider */
 .nivoslider {
-	margin-bottom: 100px;
+	margin-bottom: 50px;
 }
 .main-wrap {
 	width: 100%;
@@ -23,7 +23,6 @@
 ***************************/
 .skills {
 	background: #383838;
-	margin-top: 300px;
 	padding-bottom: 50px;
 }
 .f-content {
