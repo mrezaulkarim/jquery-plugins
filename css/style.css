@@ -1,4 +1,84 @@
 *{margin: 0; padding: 0; box-sizing: border-box;}
+section {
+	padding: 50px;
+}
+/* Gallary */
+.view {
+	background: #E9ECEF;
+}
+/* Animated- Text */
+#bodycolor input:focus {
+	outline: 0;
+	box-shadow: none;
+}
+#keyinput {
+    height: 40px;
+    padding: 0.5em;
+    border: 1px solid #cccccc;
+    border-radius: 3px;
+}
+
+#block {
+    padding: 1em 0;
+    color: #616161;
+    font-family: Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif;
+}
+
+#name {
+	color: #9d0521;
+}
+/* Clock */
+#body{
+    background-color:grey;
+}
+
+#test{
+    text-align:center;
+    font-family:serif;
+    color: red;
+    letter-spacing:2px;
+    font-size:70px;
+    text-shadow:5px 3px 25px white;
+    padding:5px;
+    border:2px lightskyblue;
+    border-radius:30px;
+}
+
+
+#text{
+    text-align:center;
+    color:white;
+    letter-spacing:3px;
+}
+#text2{
+    margin-top:10%;
+    text-align:center;
+    font-family:Arial;
+    color: white;
+    letter-spacing:3px;
+    word-spacing:4px;
+    text-shadow:5px 3px 20px lightskyblue;
+    
+}
+#b1{
+    text-align:center;
+    font-weight:bold;
+}
+#ttt{
+    color: white;
+    text-align:center;
+    padding:5px;
+    border:2px lightskyblue;
+    font-family:serif;
+    border-radius:30px;
+}
+#all{
+    padding:5px;
+    border:5px solid lightskyblue;
+    font-family:serif;
+    border-radius:30px;
+}
+/* Grid */
 .grid-js {
 	padding: 50px;
 }
@@ -132,7 +212,18 @@ svg  circle {
 	font-size: 18px;
 	font-style: italic;
 }
-/* Gallary */
-.view {
-	background: #E9ECEF;
+/* like dislike */
+#para {
+font-size:30px;
+}
+.btns {
+padding:10px;
+font-size:30px;
+background-color:tomato;
+color:white;
+border:1px solid;
+}
+.btns:focus {
+	outline: 0;
+	box-shadow: none;
 }
