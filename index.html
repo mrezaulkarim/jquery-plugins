@@ -29,9 +29,6 @@
     <link rel="stylesheet" type="text/css" href="css/square-loader.min.css" />
     <link rel="stylesheet" type="text/css" href="css/demo.css" />
     <link rel="stylesheet" type="text/css" href="css/component.css" />
-    <!--[if IE]>
-      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
     <script>
       document.documentElement.className = 'js';
     </script>
@@ -44,7 +41,7 @@
     <title>Jquery Plugins</title>
   </head>
   <body>
-              <!-- Gallary -->
+      <!-- Gallary -->
            <div class="view">
               <header class="header">
                 <div class="codrops-links">
@@ -166,6 +163,35 @@
             </div> 
 
       <!--  grid-view jQuery plugin.- -->
+      <!-- Animated text -->
+    <!-- Animate text -->
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div id="bodycolor">
+              <input name="keyinput" type="text" id="keyinput" placeholder="Whats your name"/>
+              <div id="block">Hello <span id="name"> </span>!</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div id="body">
+              <form id="all">
+                <div id="test">loading</div>
+                <div id="ttt"></div>
+              </form>
+              <!-- <p id="text">Made by Reza</p> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
       <!-- <div class="jquery-script-center"> -->
         <div id="carbon-block"></div>
         <div class="jquery-script-ads">
@@ -497,7 +523,19 @@
       </div>
     </section>
         <!-- End Counter section -->
-   
+   <!-- like dislike -->
+   <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <p id="para">0</p>
+            <button id="btn1" class="btns" onclick="like()">Like</button>
+            <button id="btn2" class="btns" onclick="dislike()">Dislike</button>
+        </div>
+      </div>
+    </div>
+     
+   </section>
     <!-- JS Links -->
 	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
@@ -514,6 +552,8 @@
     <script src="js/dynamics.min.js"></script>
     <script src="js/imagesloaded.pkgd.min.js"></script>
     <script src="js/main.js"></script>
+    <!-- Animated text -->
+    
     <script src="js/script.js" ></script>
     <!-- Grid-View -->
     <!-- <script src="js/slick/slick.js" type="text/javascript" charset="utf-8"></script> -->
@@ -572,5 +612,116 @@
       </script>
       <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
       <script src="js/jquery.counterup.min.js"></script>
+      <!-- Animated Text -->
+      <script type="text/javascript">
+        $(function() {
+
+    $("input").keydown(function() {
+
+        $("#bodycolor").css("background-color", "#d4dfe8");
+
+        $("#block").animate({
+            opacity: 1,
+            fontSize: "3em"
+        }, 1500);
+
+    });
+
+    $("input").keyup(function() {
+
+        var name = $('#keyinput').val();
+
+        $("#name").text(name);
+
+        $("#bodycolor").css("background-color", "#f1f1f1");
+
+        $("#block").animate({
+            opacity: 0.5,
+            fontSize: "1em"
+        }, 1500);
+    });
+});
+      </script>
+      <!-- Clock -->
+      <script type="text/javascript">
+        window.onload = function(){
+//alert('Hi, You Guys are awesome! Already 2k likes?!!  WOW Thank you soooooo much!!');
+printTime();
+};
+
+function printTime() {
+    var d = new Date();
+    var hours = d.getHours();
+    var mins = d.getMinutes();
+    var secs = d.getSeconds();
+    var day = d.getDay();
+    var date = d.getDate();
+    var month = d.getMonth();
+    var year = d.getFullYear();
+    
+        switch (day){
+        
+            case 0:
+                day = "Sunday";
+                break;
+            case 1:
+                day = "Monday";
+                break;
+            case 2:
+                day = "Tuesday";
+                break;
+            case 3:
+                day = "Wednesday";
+                break;
+            case 4:
+                day = "Thursday";
+                break;
+            case 5:
+                day = "Friday";
+                break;
+            case 6:
+                day = "Saturday";
+                break;
+           }
+    
+    
+        if(hours<10){
+            hours = "0" + hours;
+        }
+        if(mins<10){
+            
+            mins = "0" + mins;
+        }
+        if(secs<10){
+
+            secs = "0" + secs;
+        }
+   
+   month = month + 1; document.getElementById("test").innerHTML = hours+":"+mins+":"+secs;
+document.getElementById("ttt").innerHTML = day + ", " + date + "." + month + "." + year;
+}
+setInterval(printTime, 1000);
+
+      </script>
+      <!-- Like dislike -->
+      <script type="text/javascript">
+        
+        function like()
+        {
+        var x=document.getElementById("para").innerHTML;
+        x++;
+        document.getElementById("para").innerHTML=x;
+        }
+        
+        function dislike()
+        {
+        var x=document.getElementById("para").innerHTML;
+        if(x!=0)
+        {
+        x--;
+        document.getElementById("para").innerHTML=x;
+        }
+        }
+      </script>
   </body>
 </html>
